@@ -41,12 +41,6 @@ const Multer = require('./FileUploder/multer')
 const Uploader = require('./FileUploder/Uploader')
 
 
-router.get('/', (req,res)=>{
-    res.send(`hello world from the server router js`)
-})
-
-///////////////// user //////////////// 
-
 router.post('/registerUser',async(req,res)=>{
     const { name,email,password,cPassword,key } = req.body
     if( !name || !email || !password || !cPassword || !key ){
